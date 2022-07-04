@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right top, #107ecd, #1a87da, #15293d, #15273c, #107ecd);
+  color: #ececf1;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+#root {
+  margin: 0 24px;
+  position: relative;
+  min-height: 100vh;
+}
+
