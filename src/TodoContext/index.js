@@ -1,7 +1,10 @@
 import React from 'react';
 import { useLocalStorage } from './useLocalStorage';
 
+
 const TodoContext = React.createContext();
+
+ 
 
 function TodoProvider(props) {
   const {
@@ -15,8 +18,7 @@ function TodoProvider(props) {
 
   const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
-
- 
+  
   let searchedTodos = [];
 
   if (!searchValue.length >= 1) {
@@ -33,11 +35,7 @@ function TodoProvider(props) {
 
   const addTodo = (text) => {
     if (!text.trim()) {
-      
-      alert('no entiendo nada');
-      
-      
-      
+      alert('Escribe algo, dejaste vacio');
       return;
     }
     let newTodos = [...todos];
@@ -46,7 +44,7 @@ function TodoProvider(props) {
       complete: false,
     });
     saveTodos(newTodos);
-    console.log(newTodos)
+   
   };
 
   
@@ -57,6 +55,7 @@ function TodoProvider(props) {
     const newTodos = [...todos];
     newTodos[todoIndex].completed = true;
     saveTodos(newTodos);
+
   };
 
   const deleteTodo = (text) => {

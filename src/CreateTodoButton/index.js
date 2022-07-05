@@ -4,6 +4,8 @@ import './CreateTodoButton.css';
 import { HiPlusCircle } from "react-icons/hi";
 
 
+
+
 function CreateTodoButton(props) {
   const onClickButton = () => {
     props.setOpenModal(prevState => !prevState);
@@ -12,10 +14,11 @@ function CreateTodoButton(props) {
   return (
     <button
       className="CreateTodoButton"
-      onClick={onClickButton}
-    >
+      onClick={onClickButton} >
       <HiPlusCircle/>
     </button>
+
+   
   );
 }
 

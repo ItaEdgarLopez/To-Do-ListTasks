@@ -2,6 +2,7 @@ import React from 'react';
 import { TodoContext } from '../TodoContext';
 import './TodoForm.css';
 
+
 function TodoForm() {
   const [newTodoValue, setNewTodoValue] = React.useState('');
   const {
@@ -20,7 +21,6 @@ function TodoForm() {
     addTodo(newTodoValue);
     setOpenModal(false);
   };
-
   return (
     <form onSubmit={onSubmit}>
       <label>Escribe tu nuevo TO-DO</label>
@@ -28,12 +28,14 @@ function TodoForm() {
         value={newTodoValue}
         onChange={onChange}
         placeholder="Es hora de trabajar..."
-      />
+        />
       <div className="TodoForm-buttonContainer">
         <button
           type="button"
           className="TodoForm-button TodoForm-button--cancel"
-          onClick={onCancel}
+          onClick={() =>{
+            onCancel();
+          }}
           >
           Cancelar
         </button>
@@ -44,10 +46,11 @@ function TodoForm() {
           Añadir
         </button>
       </div>
-      <img src="https://us.123rf.com/450wm/sabelskaya/sabelskaya1903/sabelskaya190300268/124419686-hombre-de-blogger-de-vector-sentado-con-caf%C3%A9-frente-a-la-pantalla-del-monitor-escribiendo-en-el-tecl.jpg?ver=6" alt='text'  height="220" width="360"/> 
-
+      <img src="https://us.123rf.com/450wm/sabelskaya/sabelskaya1903/sabelskaya190300268/124419686-hombre-de-blogger-de-vector-sentado-con-caf%C3%A9-frente-a-la-pantalla-del-monitor-escribiendo-en-el-tecl.jpg?ver=6" alt='text'  height="290" width="290"/> 
+      
     </form>
   );
+  
 }
 
 export { TodoForm };
