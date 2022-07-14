@@ -5,9 +5,9 @@ import './Empty-ToDo.css';
 
 
 function EmptyTodos() {
-  return <p>Crea tu primer To-DO! 
+  return <h2>Crea tu primer To-DO! 
     
-  </p>;
+  </h2>;
 }
 
 export { EmptyTodos };

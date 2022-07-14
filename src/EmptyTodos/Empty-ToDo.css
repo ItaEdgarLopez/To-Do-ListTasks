@@ -1,8 +1,11 @@
-p{
-    color: white;
+h2{
+    color: black;
     font-size: 30px;
     text-align: center;
 
 
     
+}
+p{
+    text-align: center;
 }

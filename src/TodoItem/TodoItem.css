@@ -1,5 +1,5 @@
 .TodoItem {
-  background-color: #313d3f9d;
+  background-color: #2a2b2b9d;
   position: relative;
   display: flex;
   justify-content: center;
@@ -32,11 +32,14 @@
   font-size: 24px;
   font-weight: bold;
   /* background-color: #CCC; */
+  color:white;
 }
 
 .Icon-check {
   position: absolute;
   left: 12px;
+  color: white;
+
 }
 .Icon-check--active {
   color: #4caf50;
